@@ -8,7 +8,8 @@ class CategoryItem extends StatelessWidget {
   final String title;
   final Color color;
 
-  CategoryItem(this.id, this.title, this.color);
+  // ignore: use_key_in_widget_constructors
+  const CategoryItem(this.id, this.title, this.color);
 
   void selectCategory(BuildContext context) {
     Navigator.of(context).pushNamed(CategoryMealsScreen.routeName,

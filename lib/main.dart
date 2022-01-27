@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import './screens/tabs_screen.dart';
 import './screens/meal_detail_screen.dart';
 import './screens/category_meals_screen.dart';
 import './screens/categories_screen.dart';
@@ -28,15 +30,15 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.pink)
             .copyWith(secondary: Colors.amber),
       ),
-      home: const CategoriesScreen(),
       initialRoute: '/',
       routes: {
-        CategoryMealsScreen.routeName: (ctx) => CategoryMealsScreen(),
+        '/': (ctx) => const TabsScreen(),
+        CategoryMealsScreen.routeName: (ctx) => const CategoryMealsScreen(),
         MealDetailScreen.routeName: (ctx) => const MealDetailScreen(),
       },
       onUnknownRoute: (settings) {
         // 404 fault back page
-        return MaterialPageRoute(builder: (ctx) => CategoriesScreen());
+        return MaterialPageRoute(builder: (ctx) => const CategoriesScreen());
       },
     );
   }

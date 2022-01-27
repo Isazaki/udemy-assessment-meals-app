@@ -11,7 +11,8 @@ class MealItem extends StatelessWidget {
   final Complexity complexity;
   final Affordability affordability;
 
-  MealItem(
+  // ignore: use_key_in_widget_constructors
+  const MealItem(
       {required this.id,
       required this.title,
       required this.imageUrl,
@@ -23,13 +24,10 @@ class MealItem extends StatelessWidget {
     switch (complexity) {
       case Complexity.Simple:
         return 'Simple';
-        break;
       case Complexity.Hard:
         return 'Hard';
-        break;
       case Complexity.Challenging:
         return 'Challenging';
-        break;
       default:
         return 'Unknown';
     }
@@ -39,13 +37,10 @@ class MealItem extends StatelessWidget {
     switch (affordability) {
       case Affordability.Affordable:
         return 'Affordable';
-        break;
       case Affordability.Pricey:
         return 'Pricey';
-        break;
       case Affordability.Luxurious:
         return 'Luxurious';
-        break;
       default:
         return 'Unknown';
     }
