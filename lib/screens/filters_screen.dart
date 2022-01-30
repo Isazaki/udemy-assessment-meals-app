@@ -10,7 +10,7 @@ class FiltersScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Your Filters')),
-        drawer: MainDrawer(),
+        drawer: const MainDrawer(),
         body: const Center(
           child: Text('Filters!'),
         ));

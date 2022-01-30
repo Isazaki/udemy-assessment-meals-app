@@ -6,6 +6,8 @@ import './categories_screen.dart';
 import '../widgets/main_drawer.dart';
 
 class TabsScreen extends StatefulWidget {
+  const TabsScreen({Key? key}) : super(key: key);
+
   @override
   _TabsScreenState createState() => _TabsScreenState();
 }
@@ -13,11 +15,11 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, Object>> _pages = [
     {
-      'page': CategoriesScreen(),
+      'page': const CategoriesScreen(),
       'title': 'Categories',
     },
     {
-      'page': FavoritesScreen(),
+      'page': const FavoritesScreen(),
       'title': 'Your Favorite',
     },
   ];
@@ -36,7 +38,7 @@ class _TabsScreenState extends State<TabsScreen> {
       appBar: AppBar(
         title: Text(_pages[_selectedPageIndex]['title'].toString()),
       ),
-      drawer: MainDrawer(),
+      drawer: const MainDrawer(),
       body: _pages[_selectedPageIndex]['page'] as Widget,
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
